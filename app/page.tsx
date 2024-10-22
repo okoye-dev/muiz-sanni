@@ -1,3 +1,9 @@
+import Navbar from "@/components/Navbar";
+
 export default function Home() {
-  return <div>Hey, I&apos;m Muiz Sanni</div>;
+  return (
+    <div className="px-8">
+      <Navbar />
+    </div>
+  );
 }
