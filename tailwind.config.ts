@@ -8,8 +8,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "440px",
+      },
       colors: {
         bg: "#13121A",
+        gray: {
+          white: "#F0F0F0",
+        },
       },
     },
   },
