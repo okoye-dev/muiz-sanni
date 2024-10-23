@@ -11,9 +11,9 @@ const ScopeOfWork: FC = () => {
 
   return (
     <div className="flex flex-col gap-6 tracking-tighter">
-      <div className="flex gap-3 px-6 font-light tracking-widest text-white/50">
-        <Image src={quotes} alt="quotes" width={14} height={14} />
-        <h2>SCOPE OF WORK</h2>
+      <div className="flex items-center gap-3 px-6 font-light tracking-widest text-white/50">
+        <Image src={quotes} alt="quotes" width={18} height={18} />
+        <h2 className="text-sm">SCOPE OF WORK</h2>
       </div>
 
       <span className="px-6 text-4xl font-medium tracking-[-0.075em]">
@@ -28,7 +28,7 @@ const ScopeOfWork: FC = () => {
         <ImageAutoCarousel text={data} reverse />
       </div>
 
-      <div className="flex w-full px-6">
+      <div className="flex w-full px-8">
         <span className="mt-10 h-[2px] w-full bg-white/10 px-6" />
       </div>
     </div>

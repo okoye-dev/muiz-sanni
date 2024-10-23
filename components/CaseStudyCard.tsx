@@ -16,7 +16,7 @@ interface IProps {
 const CaseStudyCard: FC<IProps> = ({ id, img, name, units, link }) => {
   return (
     <div className="group flex justify-center">
-      <div className="flex flex-col gap-5 overflow-y-clip rounded-3xl p-4 xs:w-[80vw] sm:max-w-[40rem] sm:p-6 md:rounded-[2rem] lg:min-w-[37vw] lg:max-w-[40rem] lg:gap-7 lg:rounded-[2.5rem] xl:min-w-[30rem] xl:max-w-[40rem]">
+      <div className="flex flex-col gap-5 overflow-y-clip rounded-3xl py-4 xs:w-[80vw] sm:max-w-[40rem] sm:py-6 md:rounded-[2rem] lg:min-w-[37vw] lg:max-w-[40rem] lg:gap-7 lg:rounded-[2.5rem] xl:min-w-[30rem] xl:max-w-[40rem]">
         <div>
           <Image
             placeholder="blur"
@@ -28,7 +28,7 @@ const CaseStudyCard: FC<IProps> = ({ id, img, name, units, link }) => {
           />
         </div>
 
-        <section className="flex gap-3 px-3 md:gap-5">
+        <section className="flex gap-3 justify-between md:gap-5">
           <div className="flex flex-col justify-between gap-3">
             <SuperscriptHeader
               className="text-3xl tracking-tighter sm:text-5xl md:text-6xl lg:text-[3.25vw]"
@@ -50,7 +50,7 @@ const CaseStudyCard: FC<IProps> = ({ id, img, name, units, link }) => {
           <div className="flex w-fit">
             <Link
               href={link}
-              className="flex h-16 w-16 items-center justify-center rounded-full border border-white/30 duration-300 group-hover:rotate-45"
+              className="flex h-16 w-16 items-center justify-center rounded-full border border-white/30 duration-300 group-hover:rotate-45 group-hover:bg-white/5"
             >
               <Image
                 src={arrow}

@@ -30,8 +30,11 @@ const Navbar: FC = () => {
   return (
     <div className="px-4">
       <div className="relative flex w-full items-center justify-between gap-3 rounded-full border border-white/10 bg-white/10 px-4 py-3">
-        <Link href={"/"} className="flex items-center gap-2 px-3">
-          <Image src={logo} alt="logo" width={14} height={14} className="w-3" />
+        <Link
+          href={"/"}
+          className="flex items-center gap-2 px-3 text-lg tracking-tighter"
+        >
+          <Image src={logo} alt="logo" width={10} height={10} className="w-2" />
           Sanni Muiz
         </Link>
 
@@ -46,15 +49,15 @@ const Navbar: FC = () => {
           ))}
         </ul>
 
-        {/* Mobile Nav Trigger */}
-        <div className="group relative rounded-full bg-black/10 p-1">
+        {/* Mobile Menu Trigger */}
+        <div className="group relative rounded-full bg-black/10 p-1 sm:hidden">
           <Image
             src={menu}
             alt="menu"
             width={14}
             height={14}
             className={cn(
-              "w-[21px] cursor-pointer sm:hidden",
+              "w-5 cursor-pointer sm:hidden",
               isMobileMenuOpen && "hidden",
             )}
             onClick={toggleMobileMenu}
@@ -75,8 +78,8 @@ const Navbar: FC = () => {
         {/* Mobile Menu */}
         <ul
           className={cn(
-            "absolute flex flex-col items-center justify-center gap-6 overflow-hidden duration-300",
-            isMobileMenuOpen ? "h-60" : "h-0",
+            "absolute flex h-0 flex-col items-center justify-center gap-6 overflow-hidden duration-300",
+            isMobileMenuOpen ? "h-60-----" : "h-0",
           )}
         >
           {navLinks.map((link, i) => (
