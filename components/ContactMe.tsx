@@ -12,11 +12,18 @@ const ContactMe: FC<IProps> = ({ className }) => {
     <button
       type="button"
       className={cn(
-        "flex w-fit items-center gap-2 rounded-full border border-white/30 px-[18px] py-3 duration-300 hover:bg-white/10",
+        "group flex w-fit items-center gap-2 rounded-full border border-white/30 px-[18px] py-3 duration-300 hover:bg-white/10",
         className,
       )}
     >
-      Contact Me <Image src={arrow} alt="arrow" width={14} height={14} />
+      Contact Me{" "}
+      <Image
+        src={arrow}
+        alt="arrow"
+        width={14}
+        height={14}
+        className="group-hover:rotate-45 duration-300"
+      />
     </button>
   );
 };
