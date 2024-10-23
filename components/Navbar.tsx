@@ -1,5 +1,5 @@
 "use client";
-import React, { FC, useState } from "react";
+import React, { FC, useState, useEffect, useRef } from "react";
 import logo from "@/assets/svgs/logo.svg";
 import menu from "@/assets/svgs/menu.svg";
 import close from "@/assets/svgs/close.svg";
@@ -17,27 +17,55 @@ const navLinks = [
     title: "Work",
     to: "work",
   },
-  {
-    title: <ContactMe />,
-    to: "resume",
-  },
 ];
 
 const Navbar: FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const mobileMenuRef = useRef<HTMLUListElement | null>(null);
+  const navRef = useRef<HTMLDivElement | null>(null);
+
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        mobileMenuRef.current &&
+        navRef.current &&
+        !navRef.current.contains(event.target as Node)
+      ) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div className="px-4">
-      <div className="relative flex w-full items-center justify-between gap-3 rounded-full border border-white/10 bg-white/10 px-4 py-3">
+    <div ref={navRef} className="absolute w-full px-4">
+      {/* Navbar */}
+      <div
+        className={cn(
+          "items-between relative flex w-full flex-col justify-center gap-3 overflow-hidden border border-white/10 bg-white/10 transition-all duration-300 sm:flex-row sm:justify-between sm:rounded-full sm:px-4 sm:py-3",
+          isMobileMenuOpen ? "rounded-[28px]" : "rounded-[50px]",
+        )}
+        style={{
+          transition: "border-radius 0.6s ease",
+        }}
+      >
         <Link
           href={"/"}
-          className="flex items-center gap-2 px-3 text-lg tracking-tighter"
+          className="flex w-fit translate-y-[6px] items-center gap-2 px-7 py-3 text-lg tracking-tighter sm:translate-y-0"
         >
           <Image src={logo} alt="logo" width={10} height={10} className="w-2" />
           Sanni Muiz
         </Link>
 
+        {/* Desktop Menu */}
         <ul className="hidden items-center justify-center gap-6 sm:flex">
           {navLinks.map((link, i) => (
             <li
@@ -47,41 +75,43 @@ const Navbar: FC = () => {
               {link.title}
             </li>
           ))}
+          <ContactMe />
         </ul>
 
         {/* Mobile Menu Trigger */}
-        <div className="group relative rounded-full p-1 sm:hidden">
+        <div
+          className={cn(
+            "group absolute right-5 top-[18px] flex w-full justify-end rounded-full p-1 duration-300 sm:hidden",
+          )}
+        >
           <Image
             src={menu}
             alt="menu"
             width={14}
             height={14}
-            className={cn(
-              "w-5 cursor-pointer sm:hidden",
-              isMobileMenuOpen && "hidden",
-            )}
+            className={cn("w-5 cursor-pointer", isMobileMenuOpen && "hidden")}
             onClick={toggleMobileMenu}
           />
           <Image
             src={close}
             alt="close"
-            width={14}
-            height={14}
-            className={cn(
-              "w-4 cursor-pointer sm:hidden",
-              !isMobileMenuOpen && "hidden",
-            )}
+            width={12}
+            height={12}
+            className={cn("w-4 cursor-pointer", !isMobileMenuOpen && "hidden")}
             onClick={toggleMobileMenu}
           />
         </div>
 
         {/* Mobile Menu */}
         <ul
+          ref={mobileMenuRef}
           className={cn(
-            "absolute flex h-0 flex-col items-center justify-center gap-6 overflow-hidden duration-300",
-            isMobileMenuOpen ? "h-60-----" : "h-0",
+            "relative flex flex-col items-center justify-center gap-8 overflow-hidden text-2xl font-light backdrop-blur-[30px] transition-all duration-300 sm:hidden",
+            isMobileMenuOpen ? "h-[17rem] opacity-100" : "h-0 opacity-0",
           )}
         >
+          <span className="absolute top-0 h-[2px] w-[90%] bg-white/10" />
+
           {navLinks.map((link, i) => (
             <li
               key={i}
@@ -90,6 +120,8 @@ const Navbar: FC = () => {
               {link.title}
             </li>
           ))}
+
+          <ContactMe colored />
         </ul>
       </div>
     </div>
