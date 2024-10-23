@@ -50,7 +50,7 @@ const Navbar: FC = () => {
         </ul>
 
         {/* Mobile Menu Trigger */}
-        <div className="group relative rounded-full bg-black/10 p-1 sm:hidden">
+        <div className="group relative rounded-full p-1 sm:hidden">
           <Image
             src={menu}
             alt="menu"
