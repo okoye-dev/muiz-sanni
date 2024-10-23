@@ -17,7 +17,7 @@ const ScopeOfWork: FC = () => {
       </div>
 
       <span className="px-6 text-4xl font-medium tracking-[-0.075em]">
-        Over the years, I've{" "}
+        Over the years, I&apos;ve{" "}
         <span className="inline text-gray-white/60">navigated through</span>{" "}
         various tech industries, broadening my{" "}
         <span className="inline text-gray-white/60">expertise.</span>

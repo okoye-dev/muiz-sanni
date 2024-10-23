@@ -4,9 +4,9 @@ import ContactMe from "./ContactMe";
 const Hero: FC = () => {
   return (
     <div className="flex flex-col gap-6 px-6 py-10 tracking-tighter">
-      <h2 className="text-xl">Hi, I'm Muiz</h2>
+      <h2 className="text-xl">Hi, I&apos;m Muiz</h2>
       <span className="text-4xl tracking-[-0.075em]">
-        I'm a product designer with 4 years of{" "}
+        I&apos;m a product designer with 4 years of{" "}
         <span className="inline text-gray-white/60">experience</span> in
         crafting engaging{" "}
         <span className="inline text-gray-white/60">user experiences</span>{" "}
