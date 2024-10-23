@@ -10,7 +10,7 @@ const Footer: FC = () => {
   const links = CONFIG.footerLinks;
 
   return (
-    <div className="flex w-fit flex-col gap-10 px-6 pb-4 pt-32">
+    <div className="flex w-fit flex-col gap-10 px-6 pb-4 pt-20">
       <h1 className="text-[15vw] font-medium leading-[15vw] tracking-tight">
         Let&apos;s Collaborate
       </h1>
