@@ -59,9 +59,9 @@ const Navbar: FC = () => {
       >
         <Link
           href={"/"}
-          className="flex w-fit translate-y-[6px] items-center gap-2 px-7 py-3 text-lg tracking-tighter sm:translate-y-0"
+          className="flex w-fit translate-y-[6px] items-center gap-3 px-7 py-3 text-lg tracking-tighter sm:translate-y-0"
         >
-          <Image src={logo} alt="logo" width={10} height={10} className="w-2" />
+          <Image src={logo} alt="logo" width={10} height={10} className="w-3" />
           Sanni Muiz
         </Link>
 
