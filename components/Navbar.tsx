@@ -46,7 +46,7 @@ const Navbar: FC = () => {
   }, []);
 
   return (
-    <div ref={navRef} className="absolute w-full px-4">
+    <div ref={navRef} className="absolute w-full px-4 md:px-10 lg:px-16">
       {/* Navbar */}
       <div
         className={cn(
@@ -66,7 +66,7 @@ const Navbar: FC = () => {
         </Link>
 
         {/* Desktop Menu */}
-        <ul className="hidden items-center justify-center gap-6 sm:flex">
+        <ul className="hidden items-center justify-center gap-8 sm:flex">
           {navLinks.map((link, i) => (
             <li
               key={i}

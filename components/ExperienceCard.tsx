@@ -19,20 +19,25 @@ const ExperienceCard: FC<IProps> = ({
   link,
 }) => {
   return (
-    <div className="flex flex-col gap-4">
-      <h2 className="text-sm font-light text-white/60">{timeFrame}</h2>
+    <div className="flex flex-col items-start gap-4 md:flex-row md:justify-between">
+      <div className="flex flex-col gap-4 md:w-3/4">
+        <h2 className="text-sm font-extralight text-white/60">{timeFrame}</h2>
 
-      <h1 className="inline gap-2 text-balance text-3xl font-light tracking-tighter sm:text-4xl">
-        {title}, <span className="font-semibold"> {company}</span>
-      </h1>
+        <h1 className="inline gap-2 text-balance text-3xl font-light tracking-tighter sm:text-4xl">
+          {title}, <span className="font-semibold"> {company}</span>
+        </h1>
 
-      <p className="-translate-y-1 font-light text-white/80">{description}</p>
+        <p className="-translate-y-1 font-light text-white/80 md:text-sm">
+          {description}
+        </p>
+      </div>
 
+      {/* Visit Link */}
       <Link
         href={link}
-        className="group flex w-fit items-center gap-2 rounded-full border border-white/30 px-5 py-3 duration-300 hover:bg-white/10"
+        className="group flex w-fit items-center gap-2 rounded-full border border-white/30 px-5 py-3 duration-300 hover:bg-white/10 md:translate-y-10"
       >
-        Visit{" "}
+        Visit
         <Image
           src={arrow}
           alt="arrow"
