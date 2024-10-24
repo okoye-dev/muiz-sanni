@@ -50,7 +50,7 @@ const Navbar: FC = () => {
       {/* Navbar */}
       <div
         className={cn(
-          "items-between relative flex w-full flex-col justify-center gap-3 overflow-hidden border border-white/10 bg-white/10 transition-all duration-300 sm:flex-row sm:justify-between sm:rounded-full sm:px-4 sm:py-3",
+          "items-between relative flex w-full flex-col justify-center gap-3 overflow-hidden border border-white/10 bg-white/10 backdrop-blur-[30px] transition-all duration-300 sm:flex-row sm:justify-between sm:rounded-full sm:px-4 sm:py-3 lg:px-6 lg:py-4",
           isMobileMenuOpen ? "rounded-[28px]" : "rounded-[50px]",
         )}
         style={{
@@ -59,14 +59,14 @@ const Navbar: FC = () => {
       >
         <Link
           href={"/"}
-          className="flex w-fit translate-y-[6px] items-center gap-3 px-7 py-3 text-lg tracking-tighter sm:translate-y-0"
+          className="flex w-fit translate-y-[6px] items-center gap-3 px-5 py-3 text-lg tracking-tighter sm:translate-y-0 lg:text-xl xl:text-2xl"
         >
           <Image src={logo} alt="logo" width={10} height={10} className="w-3" />
           Sanni Muiz
         </Link>
 
         {/* Desktop Menu */}
-        <ul className="hidden items-center justify-center gap-8 sm:flex">
+        <ul className="hidden items-center justify-center gap-8 sm:flex md:gap-10 md:text-lg lg:gap-12 lg:text-xl xl:text-2xl">
           {navLinks.map((link, i) => (
             <li
               key={i}
@@ -75,6 +75,7 @@ const Navbar: FC = () => {
               {link.title}
             </li>
           ))}
+
           <ContactMe />
         </ul>
 
@@ -106,7 +107,7 @@ const Navbar: FC = () => {
         <ul
           ref={mobileMenuRef}
           className={cn(
-            "relative flex flex-col items-center justify-center gap-8 overflow-hidden text-2xl font-light backdrop-blur-[30px] transition-all duration-300 sm:hidden",
+            "relative flex flex-col items-center justify-center gap-8 overflow-hidden text-2xl font-light transition-all duration-300 sm:hidden",
             isMobileMenuOpen ? "h-[17rem] opacity-100" : "h-0 opacity-0",
           )}
         >
