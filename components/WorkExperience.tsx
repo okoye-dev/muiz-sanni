@@ -14,7 +14,7 @@ const WorkExperience: FC = () => {
     <div className="px-6 py-20 md:px-14 lg:px-20">
       <div className="flex items-center gap-3 font-light tracking-widest text-white/50">
         <Image src={quotes} alt="quotes" width={18} height={18} />
-        <h2 className="text-sm">EXPERIENCE</h2>
+        <h2 className="text-sm md:text-base lg:text-xl">EXPERIENCE</h2>
       </div>
 
       <SuperscriptHeader

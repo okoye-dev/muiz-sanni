@@ -7,13 +7,15 @@ import WorkExperience from "@/components/WorkExperience";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-bg py-6 text-gray-white">
-      <Navbar />
-      <Hero />
-      <ScopeOfWork />
-      <CaseStudies />
-      <WorkExperience />
-      <Footer />
+    <div className="flex min-h-screen justify-center bg-bg py-6 text-gray-white">
+      <div className="relative max-w-[100rem]">
+        <Navbar />
+        <Hero />
+        <ScopeOfWork />
+        <CaseStudies />
+        <WorkExperience />
+        <Footer />
+      </div>
     </div>
   );
 }

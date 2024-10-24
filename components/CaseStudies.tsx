@@ -14,8 +14,8 @@ const CaseStudies: FC = () => {
         text="Case Studies"
         superscript="FEATURED (4)"
         plainSubscript
-        className="flex justify-center pb-2 pt-12 text-4xl font-semibold tracking-[-0.075em] xs:text-5xl md:text-[6.5vw] lg:text-[5.5vw]"
-        subscriptClasses="xs:translate-y-1"
+        className="flex justify-center pb-2 pt-12 text-4xl font-semibold tracking-[-0.075em] xs:text-5xl md:text-[6.5vw] lg:text-[7.5vw] lg:pb-10"
+        subscriptClasses="xs:translate-y-1 lg:text-sm"
       />
 
       <section className="grid grid-cols-1 justify-center gap-6 scroll-smooth sm:mb-16 lg:grid-cols-2 lg:gap-10 lg:px-[2vw] xl:gap-14 xl:px-20">

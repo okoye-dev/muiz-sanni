@@ -31,15 +31,16 @@ const CaseStudyCard: FC<IProps> = ({ id, img, name, units, link }) => {
         <section className="flex justify-between gap-3 sm:gap-5">
           <div className="flex flex-col justify-between gap-3 sm:gap-5">
             <SuperscriptHeader
-              className="text-3xl tracking-tighter sm:text-5xl md:text-6xl lg:text-[3.25vw]"
+              className="text-3xl tracking-tighter sm:text-5xl md:text-6xl lg:text-[4vw]"
+              subscriptClasses="lg:text-3xl lg:-translate-y-2 lg:-translate-x-1"
               text={name}
               superscript={id.toString()}
             />
 
             <div className="flex flex-wrap gap-2 xs:w-5/6 sm:w-3/4 sm:gap-3">
               {units.map((unit, i) => (
-                <div key={i} className="my-1">
-                  <span className="rounded-full bg-white/10 px-3 py-2 text-xs font-extralight tracking-wide sm:px-4 sm:text-sm md:text-base lg:text-lg">
+                <div key={i} className="my-1 lg:mb-3">
+                  <span className="rounded-full bg-white/10 px-3 py-2 text-xs font-extralight tracking-wide sm:px-4 sm:text-sm lg:py-3">
                     {unit}
                   </span>
                 </div>

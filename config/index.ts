@@ -67,21 +67,21 @@ export const CONFIG = {
     },
     {
       id: 2,
-      timeFrame: "DEC 2023 - FEB 2024",
+      timeFrame: "NOV 2023 - DEC 2023",
       title: "Brand Designer",
       company: "AfriHacks Hackathon",
       link: "https://afrihacks.com/",
       description:
-        "Revamped Soillight's mobile app interface to enhance user experience across diverse demographics, optimizing the purchasing journey. Developed a high-impact landing page to clarify Soillight's functionalities for new users. These initiatives resulted in a substantial 46% increase in user engagement.",
+        "Produced social media graphics to promote and raise awareness for the AfriHacks hackathon. Additionally, developed branding and designed various materials for the demo day event, including large-format media, banners, and promotional items.",
     },
     {
       id: 3,
-      timeFrame: "DEC 2023 - FEB 2024",
+      timeFrame: "JUN 2023 - PRESENT (PART TIME)",
       title: "Product Designer",
       company: "MDot Technologies",
       link: "https://afrihacks.com/",
       description:
-        "Revamped Soillight's mobile app interface to enhance user experience across diverse demographics, optimizing the purchasing journey. Developed a high-impact landing page to clarify Soillight's functionalities for new users. These initiatives resulted in a substantial 46% increase in user engagement.",
+        "I led user-centric design for banking applications, teller software, and dashboards, focusing on user needs. By applying UX principles and market research, I ensured consistent, highly functional products. This resulted in significant improvements in key metrics like user engagement and retention across all projects.",
     },
   ],
 
