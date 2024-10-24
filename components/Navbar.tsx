@@ -46,7 +46,7 @@ const Navbar: FC = () => {
   }, []);
 
   return (
-    <div ref={navRef} className="absolute w-full px-4 md:px-10 lg:px-16">
+    <div ref={navRef} className="absolute z-10 w-full px-4 md:px-10 lg:px-16">
       {/* Navbar */}
       <div
         className={cn(
@@ -122,7 +122,7 @@ const Navbar: FC = () => {
             </li>
           ))}
 
-          <ContactMe colored />
+          <ContactMe />
         </ul>
       </div>
     </div>

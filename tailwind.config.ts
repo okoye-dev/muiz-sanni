@@ -17,6 +17,14 @@ const config: Config = {
           white: "#F0F0F0",
         },
       },
+      animation: {
+        "spin-slow": "spin 8s linear infinite",
+      },
+      keyframes: {
+        "spin-slow": {
+          to: { transform: "rotate(360deg)" },
+        },
+      },
     },
   },
   plugins: [],

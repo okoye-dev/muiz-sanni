@@ -5,28 +5,28 @@ import { cn } from "@/utils";
 
 interface IProps {
   className?: string;
-  colored?: boolean; // Add the boolean prop 'colored'
 }
 
-const ContactMe: FC<IProps> = ({ className, colored = false }) => {
+const ContactMe: FC<IProps> = ({ className }) => {
   return (
     <button
       type="button"
       className={cn(
-        "group flex w-fit items-center gap-2 rounded-full border-white/30 px-[18px] py-3 xl:px-6 lg:px-5 duration-300 hover:bg-white/10",
+        "group relative z-10 flex w-fit items-center gap-2 rounded-full border border-white/30 px-[18px] py-3 duration-500 hover:border-transparent hover:text-white lg:px-5 xl:px-6",
         className,
-        colored
-          ? "gap-3 bg-gradient-to-r from-[#FFA620] to-[#EF39FF] px-8 py-5 text-white shadow-[0_0_15px_3px_rgba(255,166,32,0.5),0_0_30px_20px_rgba(239,57,255,0.2)]"
-          : "border hover:bg-white/10",
       )}
     >
-      Contact Me{" "}
+      {/* Background Gradient Div */}
+      <div className="absolute inset-0 -z-10 h-full w-full rounded-full bg-gradient-to-r from-[#FFA620] to-[#EF39FF] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+      {/* Blurred Aura Div */}
+      <div className="absolute inset-0 -z-20 h-full w-full bg-gradient-to-r from-[#FFA620] to-[#EF39FF] opacity-0 blur-lg transition-opacity duration-500 group-hover:opacity-80"></div>
+      Contact Me
       <Image
         src={arrow}
         alt="arrow"
         width={14}
         height={14}
-        className={cn("duration-300 xl:w-[18px] group-hover:rotate-45", colored && "w-5")}
+        className="duration-500 group-hover:rotate-45 xl:w-[18px]"
       />
     </button>
   );
