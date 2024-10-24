@@ -23,11 +23,11 @@ const ExperienceCard: FC<IProps> = ({
       <div className="flex flex-col gap-4 md:w-3/4">
         <h2 className="text-sm font-extralight text-white/60">{timeFrame}</h2>
 
-        <h1 className="inline gap-2 text-balance text-3xl font-light tracking-tighter sm:text-4xl lg:text-5xl">
+        <h1 className="lg:text-5xlm inline gap-2 text-balance text-3xl font-light tracking-tighter sm:text-4xl xl:text-6xl">
           {title}, <span className="font-semibold"> {company}</span>
         </h1>
 
-        <p className="-translate-y-1 font-extralight text-white/70 md:text-sm lg:leading-6 xl:w-3/4">
+        <p className="-translate-y-1 font-extralight text-white/70 md:text-sm lg:leading-6 xl:w-3/4 xl:text-base">
           {description}
         </p>
       </div>

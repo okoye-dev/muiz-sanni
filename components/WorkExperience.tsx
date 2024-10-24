@@ -20,7 +20,7 @@ const WorkExperience: FC = () => {
       <SuperscriptHeader
         text="Work Experience"
         plainSubscript
-        className="flex pb-2 pt-3 text-4xl font-semibold tracking-[-0.075em] xs:text-5xl md:text-[4.5vw] lg:text-[5.5vw]"
+        className="flex pb-2 pt-3 text-4xl font-semibold tracking-[-0.075em] xs:text-5xl md:text-[6.5vw] lg:text-[7.5vw]"
       />
 
       <div className="flex flex-col gap-10 pt-10">
