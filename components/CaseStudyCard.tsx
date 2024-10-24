@@ -16,7 +16,7 @@ interface IProps {
 const CaseStudyCard: FC<IProps> = ({ id, img, name, units, link }) => {
   return (
     <div className="group flex justify-center">
-      <div className="flex flex-col gap-5 overflow-y-clip rounded-3xl py-4 xs:w-[80vw] sm:max-w-[40rem] sm:gap-7 sm:py-6 md:rounded-[2rem] lg:min-w-[37vw] lg:max-w-[40rem] lg:rounded-[2.5rem] xl:min-w-[30rem]">
+      <div className="flex flex-col gap-5 overflow-y-clip rounded-3xl py-4 xs:w-[80vw] sm:max-w-[40rem] sm:gap-7 sm:py-6 md:rounded-[2rem] lg:min-w-[37vw] lg:max-w-[40rem] lg:gap-10 lg:rounded-[2.5rem] xl:min-w-[30rem]">
         <div>
           <Image
             placeholder="blur"
@@ -29,7 +29,7 @@ const CaseStudyCard: FC<IProps> = ({ id, img, name, units, link }) => {
         </div>
 
         <section className="flex justify-between gap-3 sm:gap-5">
-          <div className="flex flex-col justify-between gap-3 sm:gap-5">
+          <div className="flex flex-col justify-between gap-3 sm:gap-5 lg:gap-6">
             <SuperscriptHeader
               className="text-3xl tracking-tighter sm:text-5xl md:text-6xl lg:text-[4vw]"
               subscriptClasses="lg:text-3xl lg:-translate-y-2 lg:-translate-x-1"
