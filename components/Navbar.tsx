@@ -46,11 +46,11 @@ const Navbar: FC = () => {
   }, []);
 
   return (
-    <div ref={navRef} className="absolute z-10 w-full px-4 md:px-10 lg:px-16">
+    <div ref={navRef} className="absolute z-20 w-full px-4 md:px-10 lg:px-16">
       {/* Navbar */}
       <div
         className={cn(
-          "items-between relative flex w-full flex-col justify-center gap-3 overflow-hidden border border-white/10 bg-white/10 backdrop-blur-[30px] transition-all duration-300 sm:flex-row sm:justify-between sm:rounded-full sm:px-4 sm:py-3 lg:px-6 lg:py-4",
+          "items-between relative flex w-full flex-col justify-center gap-3 overflow-hidden border border-white/10 bg-white/5 backdrop-blur-[30px] transition-all duration-300 sm:flex-row sm:justify-between sm:rounded-full sm:px-4 sm:py-3 lg:px-6 lg:py-4",
           isMobileMenuOpen ? "rounded-[28px]" : "rounded-[50px]",
         )}
         style={{
