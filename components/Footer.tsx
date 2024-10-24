@@ -19,11 +19,11 @@ const Footer: FC = () => {
           alt=""
           height={800}
           width={800}
-          className="animate-spin-slow max-w-[40rem] duration-1000"
+          className="max-w-[40rem] animate-spin-slow duration-1000"
         />
       </span>
 
-      <div className="flex w-fit flex-col justify-center gap-10 md:flex-row md:items-center md:gap-0">
+      <div className="z-10 flex w-fit flex-col justify-center gap-10 md:flex-row md:items-center md:gap-0">
         <h1 className="w-fit text-[15vw] font-medium leading-[15vw] tracking-tight md:text-[9vw] md:leading-[9vw]">
           Let&apos;s Collaborate
         </h1>
