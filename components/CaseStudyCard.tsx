@@ -51,8 +51,13 @@ const CaseStudyCard: FC<IProps> = ({ id, img, name, units, link }) => {
           <div className="flex w-fit">
             <Link
               href={link}
-              className="md:h-18 md:w-18 flex h-16 w-16 items-center justify-center rounded-full border border-white/30 duration-300 group-hover:rotate-45 group-hover:bg-white/5"
+              className="md:h-18 md:w-18 relative flex h-16 w-16 items-center justify-center rounded-full border border-white/30 duration-300 group-hover:rotate-45 group-hover:bg-white/5"
             >
+              {/* Background Gradient Div */}
+              <div className="absolute inset-0 -z-10 h-full w-full rounded-full bg-gradient-to-r from-[#FFA620] to-[#EF39FF] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+              {/* Blurred Aura Div */}
+              <div className="absolute inset-0 -z-20 h-full w-full rounded-full bg-gradient-to-r from-[#FFA620] to-[#EF39FF] opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-80"></div>
+
               <Image
                 src={arrow}
                 alt="go"
